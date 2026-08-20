@@ -1,0 +1,357 @@
+/* =========================================================
+   Portfolio — Paco Diaz
+   Thème sombre façon éditeur de code, sans changer ta structure HTML.
+   ========================================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root {
+    --bg-primary: #14141c;
+    --bg-elevated: #1c1e2b;
+    --bg-hover: #242739;
+
+    --texte-primaire: #c7cdf0;
+    --texte-secondaire: #8b90ad;
+    --texte-mute: #565b78;
+
+    --accent-violet: #7aa2f7;
+    --accent-mint: #9ece6a;
+    --accent-corail: #f7768e;
+    --accent-ambre: #e0af68;
+
+    --bordure: rgba(199, 205, 240, 0.12);
+    --bordure-vive: rgba(122, 162, 247, 0.45);
+
+    --police-affichage: 'Space Grotesk', sans-serif;
+    --police-texte: 'Inter', sans-serif;
+    --police-mono: 'JetBrains Mono', monospace;
+
+    --rayon: 10px;
+    --transition: 180ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+    background: var(--bg-primary);
+    background-image:
+        radial-gradient(circle at 15% 0%, rgba(122, 162, 247, 0.08), transparent 45%),
+        radial-gradient(circle at 85% 15%, rgba(158, 206, 106, 0.06), transparent 40%);
+    color: var(--texte-primaire);
+    font-family: var(--police-texte);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+}
+
+h1, h2 {
+    font-family: var(--police-affichage);
+    color: #fff;
+    letter-spacing: -0.01em;
+    line-height: 1.2;
+}
+h1 { font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 700; margin-top: 1.25rem; }
+h2 { font-size: clamp(1.3rem, 3vw, 1.7rem); font-weight: 600; margin-bottom: 0.75rem; }
+p { color: var(--texte-secondaire); }
+a { color: inherit; text-decoration: none; }
+
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
+    outline: 2px solid var(--accent-violet);
+    outline-offset: 3px;
+}
+
+section {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 4rem 1.5rem;
+}
+
+/* ---------- Header / nav ---------- */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(20, 20, 28, 0.8);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--bordure);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.25rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0.75rem 1.5rem;
+}
+
+nav li a {
+    display: inline-block;
+    font-family: var(--police-mono);
+    font-size: 0.8rem;
+    letter-spacing: 0.03em;
+    color: var(--texte-secondaire);
+    padding: 0.5rem 0.85rem;
+    border-radius: 6px;
+    position: relative;
+    transition: color var(--transition), background var(--transition);
+}
+
+nav li a::after {
+    content: "";
+    position: absolute;
+    left: 0.85rem; right: 0.85rem; bottom: 0.3rem;
+    height: 2px;
+    background: linear-gradient(90deg, var(--accent-violet), var(--accent-mint));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform var(--transition);
+}
+
+nav li a:hover, nav li a:focus-visible { color: #fff; background: var(--bg-hover); }
+nav li a:hover::after, nav li a:focus-visible::after { transform: scaleX(1); }
+
+nav input[type="search"] {
+    background: var(--bg-elevated);
+    border: 1px solid var(--bordure);
+    color: var(--texte-primaire);
+    font-family: var(--police-mono);
+    font-size: 0.8rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+    width: 170px;
+    margin-left: auto;
+    transition: border-color var(--transition), width var(--transition);
+}
+nav input[type="search"]:focus-visible { border-color: var(--accent-violet); width: 200px; }
+nav form {
+    margin-left: auto;
+}
+nav button[type="submit"] {
+    background: var(--accent-violet);
+    color: #10111a;
+    font-family: var(--police-mono);
+    font-weight: 600;
+    font-size: 0.8rem;
+    border: none;
+    border-radius: 6px;
+    padding: 0.5rem 0.9rem;
+    margin-left: 0.4rem;
+    cursor: pointer;
+    transition: background var(--transition), transform var(--transition);
+}
+nav button[type="submit"]:hover { background: var(--accent-mint); }
+nav button[type="submit"]:active { transform: scale(0.94); }
+
+/* ---------- Accueil ---------- */
+#accueil { text-align: center; padding-top: 4rem; }
+
+.photo img {
+    border-radius: 50%;
+    border: 3px solid transparent;
+    background:
+        linear-gradient(var(--bg-primary), var(--bg-primary)) padding-box,
+        linear-gradient(135deg, var(--accent-violet), var(--accent-mint)) border-box;
+    transition: transform 260ms ease;
+}
+.photo img:hover { transform: scale(1.05) rotate(-2deg); }
+
+#accueil p { max-width: 640px; margin: 1rem auto 0; }
+
+/* ---------- Projets ---------- */
+#projets h2 { text-align: left; }
+
+.projets-liste { margin-top: 1.75rem; }
+
+.projet-carte, article.contact {
+    background: var(--bg-elevated);
+    border: 1px solid var(--bordure);
+    border-radius: var(--rayon);
+    box-shadow: 0 4px 24px rgba(0,0,0,0.35);
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+    transition: transform var(--transition), border-color var(--transition), box-shadow var(--transition);
+}
+
+.projet-carte:hover {
+    transform: translateY(-5px);
+    border-color: var(--bordure-vive);
+    box-shadow: 0 14px 34px rgba(122, 162, 247, 0.18);
+}
+
+/* barre de fenêtre façon éditeur, 3 points */
+.projet-carte::before {
+    content: "";
+    display: block;
+    height: 30px;
+    background: rgba(255,255,255,0.03);
+    border-bottom: 1px solid var(--bordure);
+    background-image:
+        radial-gradient(circle 4px at 16px 15px, var(--accent-corail) 99%, transparent 100%),
+        radial-gradient(circle 4px at 32px 15px, var(--accent-ambre) 99%, transparent 100%),
+        radial-gradient(circle 4px at 48px 15px, var(--accent-mint) 99%, transparent 100%);
+}
+
+.projet-carte h2, .projet-carte p,
+article.contact h7, article.contact p {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+.projet-carte h2 { margin-top: 1.1rem; font-size: 1.15rem; }
+.projet-carte p { padding-bottom: 1.4rem; font-size: 0.95rem; }
+
+.projet-carte img {
+    width: 22px; height: 22px;
+    vertical-align: -5px;
+    border-radius: 4px;
+    margin: 0 2px;
+    transition: transform var(--transition);
+}
+.projet-carte img:hover { transform: scale(1.25); }
+
+/* ---------- Compétences ---------- */
+#competences img {
+    width: 22px; height: 22px;
+    vertical-align: -5px;
+    border-radius: 4px;
+    margin: 0 3px;
+    transition: transform var(--transition);
+}
+#competences img:hover { transform: scale(1.25); }
+
+/* ---------- Expériences ---------- */
+#experiences ul, #experiences li {
+    list-style: none;
+}
+#experiences ul {
+    margin-top: 1.5rem;
+    padding-left: 1.25rem;
+    border-left: 2px solid var(--bordure);
+}
+#experiences li {
+    position: relative;
+    padding: 0 0 1.2rem 1rem;
+    color: var(--texte-secondaire);
+    transition: color var(--transition);
+}
+#experiences li:hover { color: var(--texte-primaire); }
+
+/* ---------- Contact ---------- */
+#contact label {
+    display: block;
+    font-family: var(--police-mono);
+    font-size: 0.8rem;
+    color: var(--texte-mute);
+    margin-top: 1rem;
+    margin-bottom: 0.35rem;
+}
+#contact input[type="text"],
+#contact input[type="email"],
+#contact textarea {
+    width: 100%;
+    max-width: 420px;
+    background: var(--bg-elevated);
+    border: 1px solid var(--bordure);
+    border-radius: 6px;
+    color: var(--texte-primaire);
+    font-family: var(--police-texte);
+    font-size: 0.95rem;
+    padding: 0.7rem 0.85rem;
+    transition: border-color var(--transition), box-shadow var(--transition);
+}
+#contact input:focus-visible, #contact textarea:focus-visible {
+    border-color: var(--accent-violet);
+    box-shadow: 0 0 0 3px rgba(122, 162, 247, 0.18);
+    outline: none;
+}
+#contact input[type="submit"] {
+    display: inline-block;
+    margin-top: 1.25rem;
+    background: var(--accent-violet);
+    color: #10111a;
+    font-family: var(--police-mono);
+    font-weight: 600;
+    font-size: 0.9rem;
+    border: none;
+    border-radius: 6px;
+    padding: 0.75rem 1.6rem;
+    cursor: pointer;
+    transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
+}
+#contact input[type="submit"]:hover {
+    background: var(--accent-mint);
+    box-shadow: 0 8px 20px rgba(158, 206, 106, 0.25);
+}
+#contact input[type="submit"]:active { transform: scale(0.95); box-shadow: none; }
+
+/* ---------- Footer ---------- */
+footer {
+    border-top: 1px solid var(--bordure);
+    padding: 1.25rem 1.5rem;
+    text-align: center;
+}
+footer p {
+    font-family: var(--police-mono);
+    font-size: 0.78rem;
+    color: var(--texte-mute);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 640px) {
+    section { padding: 3rem 1.25rem; }
+    nav input[type="search"] { margin-left: 0; width: 100%; margin-top: 0.5rem; }
+    nav ul { justify-content: center; }
+}
+
+/* ---------- Mouvement réduit ---------- */
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    * { animation-duration: 0.001ms !important; transition-duration: 0.001ms !important; }
+}
+
+/* --- POUR LES TABLETTES (écrans inférieurs à 1024px) --- */
+@media screen and (max-width: 1024px) {
+    body {
+        padding: 15px;
+    }
+    
+    /* Ajuste la largeur de tes conteneurs principaux */
+    .projets-liste {
+        flex-direction: column;
+    }
+}
+
+/* --- POUR LES TELEPHONES (écrans inférieurs à 768px) --- */
+@media screen and (max-width: 768px) {
+    /* Empêche le contenu de déborder sur les côtés */
+    body {
+        overflow-x: hidden;
+    }
+
+    /* Range la barre de navigation verticalement si elle est en ligne */
+    nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    /* Réduit un peu les grands titres pour que ça rentre bien sur l'écran */
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    /* Force tes cartes de projets à prendre toute la largeur disponible */
+    .projet-carte {
+        width: 100% !important;
+        margin-bottom: 20px;
+    }
+
+    /* Réduit la taille de la barre de recherche pour qu'elle ne dépasse pas */
+    nav input[type="search"] {
+        width: 100% !important;
+        max-width: 250px;
+        margin-left: 0;
+    }
+}

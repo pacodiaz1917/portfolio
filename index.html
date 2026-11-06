@@ -1,139 +1,901 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>portfolio</title>
+    <title>Pape Makhoudia Dieng | Portfolio - Développeur Web & Solutions Numériques</title>
+    <meta name="description" content="Portfolio de Pape Makhoudia Dieng - Étudiant en Licence 2 Informatique à Dakar, passionné par le développement web, l'ingénierie des bases de données et l'intelligence artificielle.">
+    <meta name="author" content="Pape Makhoudia Dieng">
+
+    <!-- Polices Google Fonts modernes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Feuilles de style -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-           <nav>
-        <ul> 
-            <section></section>
-    <li> <a href="#accueil">ACCUEIL</a></li>
-    <li> <a href="#projets">PROJETS</a></li>
-    <li> <a href="#competences">COMPÉTENCES</a></li>
-    <li> <a href="#experiences">EXPÉRIENCES</a></li>
-    <li> <a href="#contact">CONTACT</a></li>
-    <form onsubmit="return false">
-        <input type="search" placeholder="Rechercher..." name="search">
-        <button type="submit">Rechercher</button>
-    </form>
-        </ul>
-           </nav>
+
+    <!-- Arrière-plan dynamique et lueurs décoratives -->
+    <div class="bg-glow bg-glow-1"></div>
+    <div class="bg-glow bg-glow-2"></div>
+    <div class="bg-grid"></div>
+
+    <!-- ================= NAVBAR ================= -->
+    <header class="navbar-header" id="navbar">
+        <div class="nav-container">
+            <a href="#accueil" class="brand-logo" aria-label="Retour à l'accueil">
+                <span class="logo-code">&lt;</span>
+                <span class="logo-text">PMD</span>
+                <span class="logo-code">/&gt;</span>
+            </a>
+
+            <!-- Menu Desktop -->
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-links">
+                    <li><a href="#accueil" class="nav-link active">Accueil</a></li>
+                    <li><a href="#a-propos" class="nav-link">À propos</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#competences" class="nav-link">Compétences</a></li>
+                    <li><a href="#projets" class="nav-link">Projets</a></li>
+                    <li><a href="#formation" class="nav-link">Parcours</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="#contact" class="btn btn-sm btn-primary">Me contacter</a>
+                <!-- Bouton Menu Mobile (Hamburger) -->
+                <button class="hamburger-btn" id="hamburger-btn" aria-label="Ouvrir le menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Menu Mobile Overlay -->
+        <div class="mobile-drawer" id="mobile-drawer">
+            <ul class="mobile-links">
+                <li><a href="#accueil" class="mobile-link">Accueil</a></li>
+                <li><a href="#a-propos" class="mobile-link">À propos</a></li>
+                <li><a href="#services" class="mobile-link">Services</a></li>
+                <li><a href="#competences" class="mobile-link">Compétences</a></li>
+                <li><a href="#projets" class="mobile-link">Projets</a></li>
+                <li><a href="#formation" class="mobile-link">Parcours</a></li>
+                <li><a href="#contact" class="mobile-link">Contact</a></li>
+            </ul>
+            <div class="mobile-drawer-cta">
+                <a href="https://wa.me/221785513676" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp w-full">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm5.8 14.15c-.24.67-1.39 1.28-1.92 1.35-.49.07-1.12.1-3.26-.78-2.56-1.06-4.2-3.66-4.33-3.83-.13-.17-1.04-1.38-1.04-2.63 0-1.25.65-1.87.88-2.12.24-.26.52-.32.69-.32.17 0 .35 0 .5.01.16.01.37-.06.58.44.22.52.74 1.8.8 1.93.07.13.11.28.02.45-.09.17-.13.28-.26.43-.13.15-.27.34-.39.46-.13.13-.26.27-.11.53.15.26.68 1.11 1.45 1.8 1 .89 1.84 1.17 2.1 1.3.26.13.41.11.57-.07.15-.17.65-.76.82-1.02.17-.26.35-.22.58-.13.24.09 1.5.71 1.76.84.26.13.43.2.5.3.06.11.06.65-.18 1.32z"/></svg>
+                    WhatsApp direct
+                </a>
+            </div>
+        </div>
     </header>
-    <section id="accueil">
-        <div class="photo">
-    <img src="IMAGES/photo.jpeg" alt="Photo de profil" width="200" height="200">
 
+    <main>
+        <!-- ================= HERO SECTION ================= -->
+        <section id="accueil" class="hero-section">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <span class="status-indicator"></span>
+                        <span>Disponible pour stage & opportunités 2025-2026</span>
+                    </div>
+
+                    <h1 class="hero-title">
+                        Bonjour, je suis <br>
+                        <span class="gradient-text">Pape Makhoudia Dieng</span>
+                    </h1>
+
+                    <p class="hero-subtitle">
+                        Étudiant en <strong>Licence 2 Informatique</strong> à l'<strong>ESCOA</strong> Dakar. Passionné par le <strong>Développement Web</strong>, l'ingénierie des <strong>Bases de données</strong> et l'intégration de l'<strong>Intelligence Artificielle</strong>.
+                    </p>
+
+                    <div class="hero-meta">
+                        <span class="meta-tag">
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                            Dakar, Sénégal
+                        </span>
+                        <span class="meta-tag">
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zm0 14.5L4.5 13.4v3.85L12 21.5l7.5-4.25V13.4L12 17.5z"/></svg>
+                            ESCOA • L2 Informatique
+                        </span>
+                        <span class="meta-tag">
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                            pdieng909@gmail.com
+                        </span>
+                    </div>
+
+                    <div class="hero-actions">
+                        <a href="#projets" class="btn btn-primary">
+                            <span>Explorer mes projets</span>
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </a>
+                        <a href="#contact" class="btn btn-secondary">
+                            <span>Me contacter</span>
+                        </a>
+                        <a href="https://wa.me/221785513676" target="_blank" rel="noopener noreferrer" class="btn btn-icon-whatsapp" title="Contacter sur WhatsApp">
+                            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm5.8 14.15c-.24.67-1.39 1.28-1.92 1.35-.49.07-1.12.1-3.26-.78-2.56-1.06-4.2-3.66-4.33-3.83-.13-.17-1.04-1.38-1.04-2.63 0-1.25.65-1.87.88-2.12.24-.26.52-.32.69-.32.17 0 .35 0 .5.01.16.01.37-.06.58.44.22.52.74 1.8.8 1.93.07.13.11.28.02.45-.09.17-.13.28-.26.43-.13.15-.27.34-.39.46-.13.13-.26.27-.11.53.15.26.68 1.11 1.45 1.8 1 .89 1.84 1.17 2.1 1.3.26.13.41.11.57-.07.15-.17.65-.76.82-1.02.17-.26.35-.22.58-.13.24.09 1.5.71 1.76.84.26.13.43.2.5.3.06.11.06.65-.18 1.32z"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hero Photo Card -->
+                <div class="hero-visual">
+                    <div class="photo-card-wrapper">
+                        <div class="photo-card-glow"></div>
+                        <div class="photo-card">
+                            <div class="photo-container">
+                                <img src="IMAGES/photo.jpeg" alt="Pape Makhoudia Dieng" class="profile-img" width="320" height="320">
+                            </div>
+                            <div class="photo-info-bar">
+                                <div class="pulse-dot"></div>
+                                <div class="photo-meta-text">
+                                    <span class="name">Pape Makhoudia Dieng</span>
+                                    <span class="role">Développeur Web & IA</span>
+                                </div>
+                                <span class="badge-mini">Dakar</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats Bar -->
+            <div class="hero-stats-wrapper">
+                <div class="container hero-stats-container">
+                    <div class="stat-card">
+                        <span class="stat-number">L2</span>
+                        <span class="stat-label">Informatique à l'ESCOA</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">4+</span>
+                        <span class="stat-label">Projets Majeurs Réalisés</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Rigueur & Passion Tech</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">Web & IA</span>
+                        <span class="stat-label">Solutions Numériques</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= A PROPOS SECTION ================= -->
+        <section id="a-propos" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Présentation</span>
+                    <h2 class="section-title">Profil & Philosophie</h2>
+                    <p class="section-desc">Découvrez qui je suis, mon parcours académique et ce qui m'anime au quotidien.</p>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-card card-glass">
+                        <div class="card-icon">
+                            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                        </div>
+                        <h3>Mon Profil Professionnel</h3>
+                        <p>
+                            Étudiant en <strong>deuxième année de licence en informatique à l'ESCOA</strong>, je suis passionné par les nouvelles technologies, le développement web, l'ingénierie des bases de données et l'intelligence artificielle.
+                        </p>
+                        <p>
+                            Rigoureux, curieux et motivé, je m'intéresse particulièrement à la <strong>conception de solutions logicielles complètes</strong>, à l'<strong>automatisation de processus</strong> et à l'utilisation des technologies d'IA pour optimiser la productivité. Je recherche une opportunité (stage ou mission) afin de mettre mes compétences en pratique et participer à des projets numériques innovants.
+                        </p>
+                    </div>
+
+                    <div class="about-side-stack">
+                        <!-- Atouts -->
+                        <div class="card-glass p-5">
+                            <h4 class="mini-title">
+                                <span class="accent-dot"></span> Atouts & Valeurs
+                            </h4>
+                            <div class="tags-cloud">
+                                <span class="tag-pill">Rigueur & sens du détail</span>
+                                <span class="tag-pill">Esprit d'analyse</span>
+                                <span class="tag-pill">Curiosité & auto-formation</span>
+                                <span class="tag-pill">Autonomie & sérieux</span>
+                                <span class="tag-pill">Travail en équipe</span>
+                                <span class="tag-pill">Capacité d'adaptation</span>
+                            </div>
+                        </div>
+
+                        <!-- Langues -->
+                        <div class="card-glass p-5">
+                            <h4 class="mini-title">
+                                <span class="accent-dot"></span> Langues
+                            </h4>
+                            <div class="lang-list">
+                                <div class="lang-item">
+                                    <div class="lang-info">
+                                        <span class="lang-name">Français</span>
+                                        <span class="lang-level">Courant / Travail</span>
+                                    </div>
+                                    <div class="progress-bar"><div class="progress-fill" style="width: 95%;"></div></div>
+                                </div>
+                                <div class="lang-item">
+                                    <div class="lang-info">
+                                        <span class="lang-name">Wolof</span>
+                                        <span class="lang-level">Courant / Maternelle</span>
+                                    </div>
+                                    <div class="progress-bar"><div class="progress-fill" style="width: 100%;"></div></div>
+                                </div>
+                                <div class="lang-item">
+                                    <div class="lang-info">
+                                        <span class="lang-name">Anglais</span>
+                                        <span class="lang-level">Intermédiaire (Technique)</span>
+                                    </div>
+                                    <div class="progress-bar"><div class="progress-fill" style="width: 70%;"></div></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Centres d'intérêt -->
+                        <div class="card-glass p-5">
+                            <h4 class="mini-title">
+                                <span class="accent-dot"></span> Centres d'intérêt
+                            </h4>
+                            <div class="interest-chips">
+                                <span>🤖 Intelligence Artificielle & Veille</span>
+                                <span>💡 Création de projets numériques</span>
+                                <span>⚙️ Programmation & Algorithmique</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= SERVICES & DOMAINES D'INTERVENTION ================= -->
+        <section id="services" class="section section-dark">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Services</span>
+                    <h2 class="section-title">Domaines d'Intervention</h2>
+                    <p class="section-desc">Des solutions techniques adaptées, de la conception logicielle au déploiement.</p>
+                </div>
+
+                <div class="services-grid">
+                    <div class="service-card card-glass">
+                        <div class="service-icon-box">
+                            <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                        </div>
+                        <h3>Développement Web</h3>
+                        <p>Création de sites web modernes, entièrement responsives, rapides et ergonomiques respectant les standards actuels.</p>
+                        <ul class="service-features">
+                            <li>Interfaces HTML5 / CSS3 / JavaScript modernes</li>
+                            <li>Backends dynamiques avec PHP</li>
+                            <li>Expérience utilisateur fluide sur mobile et desktop</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-card card-glass">
+                        <div class="service-icon-box">
+                            <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+                        </div>
+                        <h3>Bases de Données & Modélisation</h3>
+                        <p>Conception méthodique de structures de données fiables, sécurisées et performantes pour toute application.</p>
+                        <ul class="service-features">
+                            <li>Modélisation conceptuelle et logique (MCD / MLD)</li>
+                            <li>Schémas relationnels avec MySQL & contraintes d'intégrité</li>
+                            <li>Requêtes SQL complexes et optimisées</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-card card-glass">
+                        <div class="service-icon-box">
+                            <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 0 1 10 10c0 5.52-4.48 10-10 10S2 17.52 2 12A10 10 0 0 1 12 2z"/><path d="M12 6v6l4 2"/></svg>
+                        </div>
+                        <h3>IA & Automatisation</h3>
+                        <p>Intégration d'outils d'intelligence artificielle générative pour booster la productivité et créer des fonctionnalités interactives.</p>
+                        <ul class="service-features">
+                            <li>Prompt Engineering avancé (ChatGPT & Gemini)</li>
+                            <li>Automatisation de tâches répétitives</li>
+                            <li>Utilisation et intégration d'APIs intelligentes</li>
+                        </ul>
+                    </div>
+
+                    <div class="service-card card-glass">
+                        <div class="service-icon-box">
+                            <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                        </div>
+                        <h3>Assistance & Solutions IT</h3>
+                        <p>Support technique, mise en forme soignée de documents professionnels et accompagnement sur vos projets numériques.</p>
+                        <ul class="service-features">
+                            <li>Mise en page pro (Word, Excel, PowerPoint, Canva)</li>
+                            <li>Résolution de bugs et assistance technique</li>
+                            <li>Conseils sur les architectures et workflows digitaux</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= COMPETENCES SECTION ================= -->
+        <section id="competences" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Technologies</span>
+                    <h2 class="section-title">Compétences Techniques</h2>
+                    <p class="section-desc">Mon stack technique et mes outils de développement favoris.</p>
+                </div>
+
+                <div class="skills-wrapper">
+                    <!-- Web & Code -->
+                    <div class="skill-category card-glass">
+                        <div class="category-header">
+                            <div class="cat-icon-badge">🌐</div>
+                            <h4>Développement Web & Code</h4>
+                        </div>
+                        <div class="skill-items-grid">
+                            <div class="skill-pill">
+                                <img src="IMAGES/html logo.webp" alt="HTML5" width="24" height="24">
+                                <span>HTML5</span>
+                            </div>
+                            <div class="skill-pill">
+                                <img src="IMAGES/css logo.png" alt="CSS3" width="24" height="24">
+                                <span>CSS3</span>
+                            </div>
+                            <div class="skill-pill">
+                                <img src="IMAGES/js.png" alt="JavaScript" width="24" height="24">
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="skill-pill">
+                                <img src="IMAGES/php.webp" alt="PHP" width="24" height="24">
+                                <span>PHP</span>
+                            </div>
+                            <div class="skill-pill">
+                                <img src="IMAGES/python.webp" alt="Python" width="24" height="24">
+                                <span>Python</span>
+                            </div>
+                            <div class="skill-pill">
+                                <img src="IMAGES/c++.webp" alt="C++" width="24" height="24">
+                                <span>C++</span>
+                            </div>
+                            <div class="skill-pill">
+                                <span class="pill-code-sym">∑</span>
+                                <span>Algorithmique</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bases de Données -->
+                    <div class="skill-category card-glass">
+                        <div class="category-header">
+                            <div class="cat-icon-badge">🗄️</div>
+                            <h4>Bases de Données & Architecture</h4>
+                        </div>
+                        <div class="skill-items-grid">
+                            <div class="skill-pill">
+                                <img src="IMAGES/mysql.webp" alt="MySQL" width="24" height="24">
+                                <span>MySQL / SQL</span>
+                            </div>
+                            <div class="skill-pill">
+                                <span class="pill-code-sym">📐</span>
+                                <span>Modélisation MCD / MLD</span>
+                            </div>
+                            <div class="skill-pill">
+                                <span class="pill-code-sym">🔗</span>
+                                <span>Relations & Intégrité</span>
+                            </div>
+                            <div class="skill-pill">
+                                <span class="pill-code-sym">⚡</span>
+                                <span>Requêtes & Index</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- IA & Outils -->
+                    <div class="skill-category card-glass">
+                        <div class="category-header">
+                            <div class="cat-icon-badge">✨</div>
+                            <h4>Intelligence Artificielle & Outils</h4>
+                        </div>
+                        <div class="skill-items-grid">
+                            <div class="skill-pill">
+                                <span class="pill-code-sym">🧠</span>
+                                <span>Prompt Engineering</span>
+                            </div>
+                            <div class="skill-pill">
+                                <span class="pill-code-sym">💬</span>
+                                <span>ChatGPT / Gemini</span>
+                            </div>
+                            <div class="skill-pill">
+                                <span class="pill-code-sym">⚙️</span>
+                                <span>Automatisation IA</span>
+                            </div>
+                            <div class="skill-pill">
+                                <span class="pill-code-sym">🔌</span>
+                                <span>Utilisation d'APIs</span>
+                            </div>
+                            <div class="skill-pill">
+                                <span class="pill-code-sym">🐙</span>
+                                <span>Git & GitHub (bases)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Bureautique & Design -->
+                    <div class="skill-category card-glass">
+                        <div class="category-header">
+                            <div class="cat-icon-badge">🎨</div>
+                            <h4>Bureautique & Conception</h4>
+                        </div>
+                        <div class="skill-items-grid">
+                            <div class="skill-pill">
+                                <span class="pill-code-sym">🎨</span>
+                                <span>Canva</span>
+                            </div>
+                            <div class="skill-pill">
+                                <span class="pill-code-sym">🖼️</span>
+                                <span>Photoshop & Illustrator (bases)</span>
+                            </div>
+                            <div class="skill-pill">
+                                <span class="pill-code-sym">📄</span>
+                                <span>Word & Mise en page</span>
+                            </div>
+                            <div class="skill-pill">
+                                <span class="pill-code-sym">📊</span>
+                                <span>Excel & Données</span>
+                            </div>
+                            <div class="skill-pill">
+                                <span class="pill-code-sym">📽️</span>
+                                <span>PowerPoint Pro</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= PROJETS SECTION ================= -->
+        <section id="projets" class="section section-dark">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Portfolio</span>
+                    <h2 class="section-title">Projets Réalisés & Réalisations</h2>
+                    <p class="section-desc">Quelques réalisations concrètes illustrant ma maîtrise du code, des bases de données et de l'IA.</p>
+                </div>
+
+                <!-- Filtres Projets -->
+                <div class="projects-filter-bar">
+                    <button class="filter-btn active" data-filter="all">Tous les projets</button>
+                    <button class="filter-btn" data-filter="web">Web & PHP</button>
+                    <button class="filter-btn" data-filter="database">Bases de Données</button>
+                    <button class="filter-btn" data-filter="ai">IA & E-Commerce</button>
+                </div>
+
+                <div class="projects-grid">
+                    <!-- Projet 1 : Sen Revision -->
+                    <article class="project-card card-glass" data-category="web">
+                        <div class="project-window-bar">
+                            <div class="window-dots">
+                                <span></span><span></span><span></span>
+                            </div>
+                            <span class="window-title">sen-revision-v2.local</span>
+                            <span class="window-badge badge-featured">Projet Phare</span>
+                        </div>
+
+                        <div class="project-card-body">
+                            <div class="project-meta-top">
+                                <span class="category-label">Plateforme Web Éducative</span>
+                                <div class="tech-stack-icons">
+                                    <span class="tech-badge">PHP</span>
+                                    <span class="tech-badge">MySQL</span>
+                                    <span class="tech-badge">HTML5/CSS3</span>
+                                    <span class="tech-badge">JavaScript</span>
+                                </div>
+                            </div>
+
+                            <h3 class="project-name">Plateforme de Révision Scolaire « Sen Revision »</h3>
+
+                            <p class="project-desc">
+                                Conception et développement d'une plateforme web pédagogique et interactive destinée aux élèves et enseignants pour simplifier et démocratiser l'accès aux contenus de révision.
+                            </p>
+
+                            <ul class="project-highlights">
+                                <li><strong>Authentification sécurisée</strong> avec gestion des rôles (utilisateurs, professeurs, administrateurs).</li>
+                                <li><strong>Modélisation relationnelle complète</strong> pour structurer cours, fiches de révision et exercices.</li>
+                                <li><strong>Interface intuitive & responsive</strong> pour un apprentissage optimal sur mobile comme sur ordinateur.</li>
+                            </ul>
+
+                            <div class="project-footer">
+                                <div class="project-tags">
+                                    <span>#Éducation</span>
+                                    <span>#FullStack</span>
+                                    <span>#MySQL</span>
+                                </div>
+                                <a href="#contact" class="btn-link">
+                                    <span>En savoir plus</span>
+                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Projet 2 : Boutique Numérique & IA -->
+                    <article class="project-card card-glass" data-category="ai">
+                        <div class="project-window-bar">
+                            <div class="window-dots">
+                                <span></span><span></span><span></span>
+                            </div>
+                            <span class="window-title">digital-store-ai.local</span>
+                        </div>
+
+                        <div class="project-card-body">
+                            <div class="project-meta-top">
+                                <span class="category-label">E-Commerce & IA Appliquée</span>
+                                <div class="tech-stack-icons">
+                                    <span class="tech-badge">IA Générative</span>
+                                    <span class="tech-badge">Prompting</span>
+                                    <span class="tech-badge">UI/UX</span>
+                                </div>
+                            </div>
+
+                            <h3 class="project-name">Boutique Numérique de Produits Digitaux</h3>
+
+                            <p class="project-desc">
+                                Mise en place d'une vitrine numérique dédiée à la mise en avant de produits digitaux (e-books, guides informatiques, templates).
+                            </p>
+
+                            <ul class="project-highlights">
+                                <li><strong>Optimisation éditoriale par l'IA :</strong> utilisation de modèles génératifs pour peaufiner les descriptions et l'argumentaire.</li>
+                                <li><strong>Parcours utilisateur optimisé :</strong> ergonomie de présentation des ressources pour un taux de conversion maximal.</li>
+                                <li><strong>Interface moderne & épurée :</strong> navigation rapide et claire pour le téléchargement des ressources.</li>
+                            </ul>
+
+                            <div class="project-footer">
+                                <div class="project-tags">
+                                    <span>#ECommerce</span>
+                                    <span>#IA</span>
+                                    <span>#DigitalProducts</span>
+                                </div>
+                                <a href="#contact" class="btn-link">
+                                    <span>Détails du projet</span>
+                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Projet 3 : Modélisation & Gestion BDD -->
+                    <article class="project-card card-glass" data-category="database">
+                        <div class="project-window-bar">
+                            <div class="window-dots">
+                                <span></span><span></span><span></span>
+                            </div>
+                            <span class="window-title">database-architecture.sql</span>
+                        </div>
+
+                        <div class="project-card-body">
+                            <div class="project-meta-top">
+                                <span class="category-label">Ingénierie des Données</span>
+                                <div class="tech-stack-icons">
+                                    <span class="tech-badge">SQL</span>
+                                    <span class="tech-badge">MySQL</span>
+                                    <span class="tech-badge">MCD / MLD</span>
+                                </div>
+                            </div>
+
+                            <h3 class="project-name">Modélisation & Gestion de Bases de Données</h3>
+
+                            <p class="project-desc">
+                                Conception rigoureuse de modèles conceptuels et logiques pour des scénarios métiers réels (gestion scolaire, e-commerce, formulaires interactifs).
+                            </p>
+
+                            <ul class="project-highlights">
+                                <li><strong>Conception MCD/MLD normalisée :</strong> intégrité référentielle stricte, gestion des clés primaires et étrangères.</li>
+                                <li><strong>Création physique optimisée :</strong> indexation, types de colonnes adaptés, règles d'unicité.</li>
+                                <li><strong>Requêtes SQL avancées :</strong> jointures multiples, regroupements, sous-requêtes et agrégations de données.</li>
+                            </ul>
+
+                            <div class="project-footer">
+                                <div class="project-tags">
+                                    <span>#SQL</span>
+                                    <span>#Architecture</span>
+                                    <span>#MCD</span>
+                                </div>
+                                <a href="#contact" class="btn-link">
+                                    <span>Explorer le schéma</span>
+                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Projet 4 : Intégration Web & Thèmes Dynamiques -->
+                    <article class="project-card card-glass" data-category="web">
+                        <div class="project-window-bar">
+                            <div class="window-dots">
+                                <span></span><span></span><span></span>
+                            </div>
+                            <span class="window-title">theme-switcher-ui.js</span>
+                        </div>
+
+                        <div class="project-card-body">
+                            <div class="project-meta-top">
+                                <span class="category-label">Frontend Interactif</span>
+                                <div class="tech-stack-icons">
+                                    <span class="tech-badge">HTML5</span>
+                                    <span class="tech-badge">CSS3</span>
+                                    <span class="tech-badge">JavaScript</span>
+                                </div>
+                            </div>
+
+                            <h3 class="project-name">Projets d'Intégration Web & Thèmes Interactifs</h3>
+
+                            <p class="project-desc">
+                                Développement d'interfaces dynamiques et responsives avec gestion de thèmes personnalisés (eau, nature, feu et défaut).
+                            </p>
+
+                            <ul class="project-highlights">
+                                <li><strong>Design 100% responsive :</strong> adaptation fluide du mobile à l'écran ultra-large.</li>
+                                <li><strong>Interactivité JavaScript client :</strong> changement de variables CSS dynamiques en temps réel.</li>
+                                <li><strong>Accessibilité & micro-animations :</strong> respect des transitions fluides et contrastes visuels.</li>
+                            </ul>
+
+                            <div class="project-footer">
+                                <div class="project-tags">
+                                    <span>#JavaScript</span>
+                                    <span>#CSSVariables</span>
+                                    <span>#UI</span>
+                                </div>
+                                <a href="#contact" class="btn-link">
+                                    <span>Voir la démo</span>
+                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= PARCOURS & FORMATION SECTION ================= -->
+        <section id="formation" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Parcours</span>
+                    <h2 class="section-title">Formation & Expériences</h2>
+                    <p class="section-desc">Mon cursus universitaire et mes expériences pratiques dans le domaine numérique.</p>
+                </div>
+
+                <div class="timeline-wrapper">
+                    <!-- Item 1 -->
+                    <div class="timeline-item">
+                        <div class="timeline-marker">
+                            <div class="marker-dot"></div>
+                        </div>
+                        <div class="timeline-content card-glass">
+                            <div class="timeline-badge">2025 – 2026 • En cours</div>
+                            <h3 class="timeline-title">Licence 2 Informatique</h3>
+                            <h4 class="timeline-subtitle">ESCOA • Dakar, Sénégal</h4>
+                            <p class="timeline-desc">
+                                Approfondissement académique et pratique : Algorithmique avancée, Programmation orientée objet, Modélisation et Bases de données relationnelles, Technologies Web modernes.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="timeline-item">
+                        <div class="timeline-marker">
+                            <div class="marker-dot"></div>
+                        </div>
+                        <div class="timeline-content card-glass">
+                            <div class="timeline-badge">2024 – 2025</div>
+                            <h3 class="timeline-title">Licence 1 Informatique</h3>
+                            <h4 class="timeline-subtitle">ESCOA • Dakar, Sénégal</h4>
+                            <p class="timeline-desc">
+                                Acquisition des fondamentaux : structures de données, bases du développement web (HTML5, CSS3, JavaScript), logique algorithmique et programmation structurée (Python, C++).
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="timeline-item">
+                        <div class="timeline-marker">
+                            <div class="marker-dot"></div>
+                        </div>
+                        <div class="timeline-content card-glass">
+                            <div class="timeline-badge">Expérience Pratique</div>
+                            <h3 class="timeline-title">Stage en Développement Web</h3>
+                            <h4 class="timeline-subtitle">ACEP</h4>
+                            <p class="timeline-desc">
+                                Conception et intégration de pages web responsives pour une entreprise locale. Travail sur la fluidité de l'interface, la présentation des services et la fidélisation utilisateur.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Item 4 -->
+                    <div class="timeline-item">
+                        <div class="timeline-marker">
+                            <div class="marker-dot"></div>
+                        </div>
+                        <div class="timeline-content card-glass">
+                            <div class="timeline-badge">Projet Clé</div>
+                            <h3 class="timeline-title">Conception de Solutions Logicielles & Bases MySQL</h3>
+                            <h4 class="timeline-subtitle">Projets Académiques & Personnels</h4>
+                            <p class="timeline-desc">
+                                Réalisation de plateformes complètes (dont <em>Sen Revision</em>), modélisation de bases de données relationnelles complexes et intégration de workflows assistés par intelligence artificielle.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= CONTACT SECTION ================= -->
+        <section id="contact" class="section section-dark">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Me Contacter</span>
+                    <h2 class="section-title">Construisons Ensemble</h2>
+                    <p class="section-desc">Vous avez un projet, une proposition de stage ou une question ? Écrivez-moi ou contactez-moi directement.</p>
+                </div>
+
+                <div class="contact-grid">
+                    <!-- Coordonnées rapides -->
+                    <div class="contact-info-panel">
+                        <div class="card-glass contact-info-card">
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                                </div>
+                                <div class="contact-text">
+                                    <span class="label">Email direct</span>
+                                    <a href="mailto:pdieng909@gmail.com" class="val email-copy" id="email-text">pdieng909@gmail.com</a>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="contact-icon whatsapp-icon">
+                                    <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm5.8 14.15c-.24.67-1.39 1.28-1.92 1.35-.49.07-1.12.1-3.26-.78-2.56-1.06-4.2-3.66-4.33-3.83-.13-.17-1.04-1.38-1.04-2.63 0-1.25.65-1.87.88-2.12.24-.26.52-.32.69-.32.17 0 .35 0 .5.01.16.01.37-.06.58.44.22.52.74 1.8.8 1.93.07.13.11.28.02.45-.09.17-.13.28-.26.43-.13.15-.27.34-.39.46-.13.13-.26.27-.11.53.15.26.68 1.11 1.45 1.8 1 .89 1.84 1.17 2.1 1.3.26.13.41.11.57-.07.15-.17.65-.76.82-1.02.17-.26.35-.22.58-.13.24.09 1.5.71 1.76.84.26.13.43.2.5.3.06.11.06.65-.18 1.32z"/></svg>
+                                </div>
+                                <div class="contact-text">
+                                    <span class="label">Téléphone & WhatsApp</span>
+                                    <a href="https://wa.me/221785513676" target="_blank" rel="noopener noreferrer" class="val">+221 78 551 36 76</a>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                                </div>
+                                <div class="contact-text">
+                                    <span class="label">Localisation</span>
+                                    <span class="val">Dakar, Sénégal</span>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.46 1.46 0 1 0 0-2.92 1.46 1.46 0 0 0 0 2.92m1.39 9.74v-8.37H5.07v8.37h2.78z"/></svg>
+                                </div>
+                                <div class="contact-text">
+                                    <span class="label">LinkedIn</span>
+                                    <a href="https://www.linkedin.com/in/pape-dieng-aa1319352" target="_blank" rel="noopener noreferrer" class="val">pape-dieng-aa1319352</a>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <svg viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
+                                </div>
+                                <div class="contact-text">
+                                    <span class="label">GitHub</span>
+                                    <a href="https://github.com/pacodiaz1917" target="_blank" rel="noopener noreferrer" class="val">pacodiaz1917</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="whatsapp-card card-glass">
+                            <h4>💬 Réponse rapide par WhatsApp</h4>
+                            <p>Pour un premier échange instantané, contactez-moi directement sur WhatsApp.</p>
+                            <a href="https://wa.me/221785513676?text=Bonjour%20Pape%20Makhoudia,%20j'ai%20vu%20votre%20portfolio..." target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp w-full">
+                                Ouvrir WhatsApp (+221 78 551 36 76)
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Formulaire de contact moderne avec envoi réel en boîte mail -->
+                    <div class="contact-form-panel card-glass">
+                        <form id="contact-form" class="modern-form" action="https://formsubmit.co/pdieng909@gmail.com" method="POST">
+                            <!-- Configurations FormSubmit pour envoi en temps réel -->
+                            <input type="hidden" name="_captcha" value="false">
+                            <input type="hidden" name="_template" value="table">
+                            <input type="hidden" name="_subject" value="🚀 Nouveau message depuis votre Portfolio (Pape Makhoudia Dieng)">
+
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="nom">Nom complet <span class="required">*</span></label>
+                                    <input type="text" id="nom" name="nom" placeholder="Ex: Jean Dupont" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Adresse Email <span class="required">*</span></label>
+                                    <input type="email" id="email" name="email" placeholder="Ex: jean.dupont@email.com" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="sujet">Objet du message</label>
+                                <input type="text" id="sujet" name="sujet" placeholder="Proposition de stage, opportunité, projet...">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Votre message <span class="required">*</span></label>
+                                <textarea id="message" name="message" rows="5" placeholder="Décrivez votre besoin ou proposition..." required></textarea>
+                            </div>
+
+                            <div class="form-actions">
+                                <button type="submit" class="btn btn-primary btn-submit" id="submit-btn">
+                                    <span>Envoyer le message</span>
+                                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+                                </button>
+                            </div>
+
+                            <div class="form-feedback" id="form-feedback"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="main-footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <a href="#accueil" class="brand-logo">
+                    <span class="logo-code">&lt;</span>
+                    <span class="logo-text">PMD</span>
+                    <span class="logo-code">/&gt;</span>
+                </a>
+                <p>Pape Makhoudia Dieng • Développeur Web & Solutions Numériques</p>
+                <p class="footer-sub">Dakar, Sénégal • ESCOA Licence 2 Informatique</p>
+            </div>
+
+            <div class="footer-nav">
+                <a href="#accueil">Accueil</a>
+                <a href="#a-propos">À propos</a>
+                <a href="#services">Services</a>
+                <a href="#projets">Projets</a>
+                <a href="#formation">Parcours</a>
+                <a href="#contact">Contact</a>
+            </div>
+
+            <div class="footer-socials">
+                <a href="https://github.com/pacodiaz1917" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="social-icon">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.87 1.52 2.34 1.07 2.91.83.1-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
+                </a>
+                <a href="https://www.linkedin.com/in/pape-dieng-aa1319352" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="social-icon">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 8.76a1.46 1.46 0 1 0 0-2.92 1.46 1.46 0 0 0 0 2.92m1.39 9.74v-8.37H5.07v8.37h2.78z"/></svg>
+                </a>
+                <a href="mailto:pdieng909@gmail.com" aria-label="Email" class="social-icon">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                </a>
+                <a href="https://wa.me/221785513676" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="social-icon">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm5.8 14.15c-.24.67-1.39 1.28-1.92 1.35-.49.07-1.12.1-3.26-.78-2.56-1.06-4.2-3.66-4.33-3.83-.13-.17-1.04-1.38-1.04-2.63 0-1.25.65-1.87.88-2.12.24-.26.52-.32.69-.32.17 0 .35 0 .5.01.16.01.37-.06.58.44.22.52.74 1.8.8 1.93.07.13.11.28.02.45-.09.17-.13.28-.26.43-.13.15-.27.34-.39.46-.13.13-.26.27-.11.53.15.26.68 1.11 1.45 1.8 1 .89 1.84 1.17 2.1 1.3.26.13.41.11.57-.07.15-.17.65-.76.82-1.02.17-.26.35-.22.58-.13.24.09 1.5.71 1.76.84.26.13.43.2.5.3.06.11.06.65-.18 1.32z"/></svg>
+                </a>
+            </div>
         </div>
-        <h1>Bienvenue sur mon portfolio</h1>
-        <p>Découvrez mes projets, compétences et expériences.
-            je suis un développeur passionné par la création de solutions innovantes et efficaces.
-            je suis toujours à la recherche de nouvelles opportunités pour apprendre et grandir dans le domaine du développement web et logiciel.
-            je suis convaincu que la collaboration et le partage des connaissances sont essentiels pour réussir dans ce domaine en constante évolution.
-            je suis impatient de travailler avec des équipes talentueuses et de contribuer à des projets passionnants qui ont un impact positif sur la société.
-        </p>
-    </section>
-    <section id="projets">
-        <h2>Projets</h2>
-        <p>Voici quelques-uns de mes projets récents.
-            ils me permettent de mettre en pratique mes compétences et de relever de nouveaux défis,en developpement web et logiciel. base de données, intelligence artificielle, et bien d'autres domaines passionnants.
-            tout en continuant à apprendre et à m'améliorer, je suis convaincu que je peux contribuer de manière significative à tout projet sur lequel je travaille.
-            </p>
-        </p>
-    </section>
 
-    <div class="projets-liste">
-    <article class="projet-carte">
-        <h2>Gestion des thèmes</h2>
-        <p>
-            J'ai utilisé
-            <img src="IMAGES/html logo.webp" alt="Logo HTML" width="28" height="28">
-            HTML,
-            <img src="IMAGES/css logo.png" alt="Logo CSS" width="28" height="28">
-            CSS et
-            <img src="IMAGES/js.png" alt="Logo JavaScript" width="28" height="28">
-            JavaScript pour changer les thèmes du site : eau, nature, feu et défaut.
-        </p>
-    </article>
-</div>
-    <div class="projets-liste">
-    <article class="projet-carte">
-        <h2>formulaire php , html et mysql</h2>
-        <p>
-            J'ai utilisé
-            <img src="IMAGES/php.webp" alt="Logo PHP" width="28" height="28">
-            PHP , <img src="IMAGES/html logo.webp" alt="logo HTML" width="28" height="28"> HTML et
-            <img src="IMAGES/mysql.webp" alt="Logo MySQL" width="28" height="28">
-            MySQL pour créer un formulaire de contact qui envoie les données saisies par l'utilisateur vers une base de données.
-        </p>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Pape Makhoudia Dieng. Tous droits réservés.</p>
         </div>
- <div class="projets-liste">
-    <article class="projet-carte">
-        <h2>site web d'apprentissage intégré d'intelligence artificielle</h2>
-        <p>
-        Dans ce projet, j'ai utilisé les modèles d'intelligence artificielle pour créer un site web d'apprentissage intégré. j'ai utilisé des algorithmes d'apprentissage automatique pour analyser les données et fournir des recommandations personnalisées aux utilisateurs.
-        avec les memes logos que les projets précédents, j'ai utilisé HTML, CSS et JavaScript pour créer une interface utilisateur conviviale et interactive. le site web permet aux utilisateurs d'apprendre de manière efficace et engageante, en utilisant des techniques d'apprentissage adaptatif et des contenus multimédias.
-        </p>
+    </footer>
 
+    <!-- Bouton Retour Haut de page -->
+    <button class="back-to-top" id="backToTop" aria-label="Retour en haut">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg>
+    </button>
 
-<section id="competences">
- </div class="projets-liste">   
-    <article class="projet-carte">
-        <h2>Compétences</h2>
-        <p>Voici quelques-unes de mes compétences techniques.
-    J'ai acquis des compétences en développement web et logiciel, en utilisant des langages  de programmation tels que HTML, CSS, JavaScript, PHP et MySQL. 
-    en outre, j'ai également des compétences en intelligence artificielle, en utilisant des algorithmes d'apprentissage automatique pour analyser les données et fournir des recommandations personnalisées aux utilisateurs.
-    j ai aussi des bases en python et en C++. 
-    je suis capable de travailler en équipe et de collaborer efficacement avec d'autres développeurs pour atteindre des objectifs communs. je suis également capable de résoudre des problèmes complexes et de trouver des solutions innovantes pour répondre aux besoins des utilisateurs.
-    j'utilise des outils de développement tels que Git, Visual Studio Code et des environnements de développement intégrés pour améliorer ma productivité et la qualité de mon code.     
-    je peux aussi creer des affiches et des logos avec des outils de conception graphique tels que Photoshop et Illustrator.
-    <img src="IMAGES/html logo.webp" alt="html logo" width="28" height="28">  <img src="IMAGES/css logo.png" alt="css logo" width="28" height="28">  <img src="IMAGES/js.png" alt="javascript logo" width="28" height="28">  <img src="IMAGES/php.webp" alt="php logo" width="28" height="28">  <img src="IMAGES/mysql.webp" alt="mysql logo" width="28" height="28">  <img src="IMAGES/python.webp" alt="python logo" width="28" height="28">  <img src="IMAGES/c++.webp" alt="c++ logo" width="28" height="28">
-
-</p>
-    </article>
-    <section id="experiences">
-    <div class="projets-liste">
-    <article class="projet-carte">
-        <h2>Expériences</h2>
-        <p>Voici quelques-unes de mes expériences professionnelles.</p>
-        <li> 🎓 Formation en informatique à ESCOA — Licence 1 Informatique.</li>
-        <li> 💻 Stage en développement web chez ACEP — Création d'un site web pour une entreprise locale.</li>
-        <li> 🎯 Projet de fin d'études — Développement d'une application de gestion de tâches.</li>
-        <Li>🗄️ Travaux sur les bases de données — création/gestion de bases avec MySQL et phpMyAdmin.</Li>
-    </article>
-    <section id="contact">
-    <article class="contact">
-        <h7>Contact</h7>
-        <p>Pour me contacter, remplissez le formulaire ci-dessous.</p>
-    </section>
-<form>
-<label for="nom">Nom :</label>
-    <input type="text" id="nom" name="nom" required><br><br>
-
-    <label for="email">Email :</label>
-    <input type="email" id="email" name="email" required><br><br>
-
-    <label for="message">Message :</label><br>
-    <textarea id="message" name="message" rows="5" required></textarea><br><br>
-
-    <input type="submit" value="Envoyer">
-</form>
+    <!-- Scripts JavaScript -->
+    <script src="script.js"></script>
 </body>
-<footer>
-    <p>&copy; 2026 le Portfolio de PACO DIAZ . Tous droits réservés.</p>
-    <div class="reseaux-sociaux">
-        <a href="https://www.linkedin.com/in/pape-dieng-aa1319352"  target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
-            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.85 0-2.14 1.45-2.14 2.93v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.61 0 4.28 2.38 4.28 5.47v6.27zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.8 0 0 .78 0 1.75v20.5C0 23.22.8 24 1.77 24h20.45c.98 0 1.78-.78 1.78-1.75V1.75C24 .78 23.2 0 22.22 0z"/></svg>
-        </a>
-        <a href="https://www.instagram.com/TON-PROFIL" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.64.07-4.85.07s-3.58-.01-4.85-.07c-3.26-.15-4.77-1.7-4.92-4.92-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85C2.38 3.9 3.9 2.38 7.15 2.23 8.42 2.17 8.8 2.16 12 2.16zM12 0C8.74 0 8.33.01 7.05.07 2.7.27.27 2.7.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.2 4.35 2.63 6.78 6.98 6.98C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c4.35-.2 6.78-2.63 6.98-6.98.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.2-4.35-2.62-6.78-6.98-6.98C15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 12 18.16 6.16 6.16 0 0 0 12 5.84zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.41-10.85a1.44 1.44 0 1 1-2.88 0 1.44 1.44 0 0 1 2.88 0z"/></svg>
-        </a>
-        <a href="https://www.tiktok.com/@TON-PROFIL" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
-            <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M16.6 5.82c-.94-.83-1.53-1.99-1.6-3.29h-3.19v14.1a3.16 3.16 0 1 1-2.24-3.03V10.4a6.34 6.34 0 1 0 5.43 6.27V9.6a8.16 8.16 0 0 0 4.76 1.52V8a5.04 5.04 0 0 1-3.16-2.18z"/></svg>
-        </a>
-    </div>
-</footer>
 </html>
